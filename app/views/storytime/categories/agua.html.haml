@@ -6,6 +6,6 @@
     %h2 Agua
   .post__body
     - @agua.each do |post|
-      %h2= link_to post.title  
+      %h2= link_to post.title 
       %p= truncate(post.content.gsub!(/(<[^>]+>|&nbsp;|\r|\n)/,"").html_safe, length: 240, escape: false)
       %br

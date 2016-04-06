@@ -6,6 +6,6 @@
     %h2 Edificación
   .post__body
     - @edificacion.each do |post|
-      %h2= link_to post.title  
+      %h2= link_to post.title,  storytime.post_path(post)
       %p= truncate(post.content.html_safe, length: 240, escape: false)
       %br

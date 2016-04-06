@@ -8,7 +8,7 @@ Storytime::Engine.routes.draw do
 
   get "energia-e-industria", to: "categories#energia", as: "energia"
   get "edificacion", to: "categories#edificacion", as: "edificacion"
-  get "cuidad-y-movilidad", to: "categories#cuiudad", as: "ciudad"
+  get "ciudad-y-movilidad", to: "categories#ciudad", as: "ciudad"
   get "agua-y-medio-ambiente", to: "categories#agua", as: "agua"
 
   ######

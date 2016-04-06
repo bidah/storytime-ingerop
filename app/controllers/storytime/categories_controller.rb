@@ -23,6 +23,24 @@ module Storytime
       end
     end
 
+    def ciudad
+      @posts = @current_storytime_site.homepage.posts
+
+      @ciudad = @posts.select do |post|
+        post.tags.any? do |tag|
+          tag.name.include? "ciudad"
+        end
+      end
+    end
+    def agua
+      @posts = @current_storytime_site.homepage.posts
+
+      @agua = @posts.select do |post|
+        post.tags.any? do |tag|
+          tag.name.include? "agua"
+        end
+      end
+    end
   end
 end
 

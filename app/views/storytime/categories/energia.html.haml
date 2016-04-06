@@ -1,0 +1,11 @@
+= render 'layout/header'
+
+
+.container
+  .post.post_energia
+    %h2 Energía
+  .post__body
+    - @energia.each do |post|
+      %h2= link_to post.title  
+      %p= truncate(post.content.gsub!(/(<[^>]+>|&nbsp;|\r|\n)/,"").html_safe, length: 240, escape: false)
+      %br

@@ -3,6 +3,15 @@ Storytime::Engine.routes.draw do
   resources :subscriptions, only: [:create]
   get "subscriptions/unsubscribe", to: "subscriptions#destroy", as: "unsubscribe_mailing_list"
 
+  ######
+  # get "test", to: "tests#index", as: "testing"
+
+  get "energia-e-industria", to: "categories#energia", as: "energia"
+  get "edificacion", to: "categories#edificacion", as: "edificacion"
+  get "cuidad-y-movilidad", to: "categories#cuiudad", as: "ciudad"
+  get "agua-y-medio-ambiente", to: "categories#agua", as: "agua"
+
+  ######
   concern :autosavable do
     resources :autosaves, only: :create
   end
